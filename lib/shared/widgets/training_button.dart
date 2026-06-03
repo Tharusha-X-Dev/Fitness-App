@@ -12,10 +12,10 @@ class TrainingButton extends StatelessWidget {
 
   static const Color buttonColor = Color(0xFF660A0A);
 
-  static const double componentHeight = 80.0;
+  static const double componentHeight = 50.0;
   static const double bridgeWidth = 20.0;
   static const double bridgeHeight = 8.0;
-  static const double innerCircleSize = 46.0;
+  static const double innerCircleSize = 30.0;
 
   @override
   Widget build(BuildContext context) {

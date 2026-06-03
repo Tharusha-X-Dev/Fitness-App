@@ -21,7 +21,7 @@ class ExploreBanner extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(24),
-          color: Colors.black.withOpacity(0.35),
+          color: Colors.black.withValues(alpha: 0.35),
         ),
         child: Center(
           child: Column(
