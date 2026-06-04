@@ -44,7 +44,7 @@ class DashboardScreen extends StatelessWidget {
                     imagePath: AppImages.cycling,
                     buttonColor: AppColors.primary,
                     onTap: () {
-                      context.go('/workout');
+                      context.push('/workout');
                     },
                   ),
 
@@ -54,7 +54,7 @@ class DashboardScreen extends StatelessWidget {
                     imagePath: AppImages.pushups,
                     buttonColor: const Color(0xFFF26B6B),
                     onTap: () {
-                      context.go('/workout');
+                      context.push('/workout');
                     },
                   ),
                 ],
@@ -64,10 +64,7 @@ class DashboardScreen extends StatelessWidget {
 
               const Text(
                 'Recommended for you',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700,
-                ),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
               ),
 
               const SizedBox(height: 20),
@@ -78,9 +75,7 @@ class DashboardScreen extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   itemCount: recommendedImages.length,
                   itemBuilder: (context, index) {
-                    return RecommendedCard(
-                      imagePath: recommendedImages[index],
-                    );
+                    return RecommendedCard(imagePath: recommendedImages[index]);
                   },
                 ),
               ),

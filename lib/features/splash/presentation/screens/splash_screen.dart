@@ -1,3 +1,4 @@
+import 'package:fitness_app/core/services/local_storage_service.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -36,13 +37,19 @@ class SplashScreen extends StatelessWidget {
                     ),
                   ),
 
-                  const SizedBox(height: 30),
+                  const SizedBox(height: 10),
 
                   TrainingButton(
-                    onTap: () {
-                      context.go('/dashboard');
+                    onTap: () async {
+                      await LocalStorageService().setFirstLaunchDone();
+
+                      if (context.mounted) {
+                        context.go('/dashboard');
+                      }
                     },
                   ),
+
+                  const SizedBox(height: 20),
                 ],
               ),
             ),

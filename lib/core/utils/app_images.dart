@@ -10,4 +10,7 @@ class AppImages {
 
   static const stretch = 'assets/images/stretch.png';
   static const warmUp = 'assets/images/girls-do-worm-up.png';
+
+  static const lift = 'assets/images/lift.png';
+  static const workout = 'assets/images/workout.png';
 }
