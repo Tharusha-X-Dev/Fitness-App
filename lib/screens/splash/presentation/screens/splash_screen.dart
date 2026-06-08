@@ -1,4 +1,5 @@
 import 'package:fitness_app/core/services/local_storage_service.dart';
+import 'package:fitness_app/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -10,15 +11,16 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,
         children: [
-          Image.asset(AppImages.splashBg, fit: BoxFit.cover),
-
-          Container(color: Colors.black.withValues(alpha: 0.45)),
+          Image.asset(
+            AppImages.splashBg,
+            fit: BoxFit.cover,
+            colorBlendMode: BlendMode.darken,
+            color: Colors.black.withValues(alpha: 0.45),
+          ),
 
           SafeArea(
             child: Padding(
@@ -30,11 +32,7 @@ class SplashScreen extends StatelessWidget {
 
                   Text(
                     'Join the Fitness\nClub',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: size.width * 0.12,
-                    ),
+                    style: AppTextStyles.splashTitle,
                   ),
 
                   const SizedBox(height: 10),

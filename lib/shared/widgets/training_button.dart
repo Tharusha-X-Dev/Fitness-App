@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fitness_app/core/theme/app_text_styles.dart';
+import 'package:fitness_app/core/utils/app_icons.dart';
 
 class TrainingButton extends StatelessWidget {
   final VoidCallback onTap;
@@ -10,75 +12,53 @@ class TrainingButton extends StatelessWidget {
     this.title = 'Start Training',
   });
 
-  static const Color buttonColor = Color(0xFF660A0A);
+  static const Color buttonColor = Color(0xFF6C0B0B);
 
-  static const double componentHeight = 50.0;
-  static const double bridgeWidth = 20.0;
-  static const double bridgeHeight = 8.0;
-  static const double innerCircleSize = 30.0;
+  static const double buttonHeight = 40;
+  static const double playButtonSize = 40;
+  static const double bridgeWidth = 13;
+  static const double bridgeHeight = 5;
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-
-    return Semantics(
-      button: true,
-      label: title,
-      child: GestureDetector(
-        onTap: onTap,
-        child: Row(
-          children: [
-            Expanded(
-              child: Container(
-                height: componentHeight,
-                decoration: BoxDecoration(
-                  color: buttonColor,
-                  borderRadius: BorderRadius.circular(componentHeight / 2),
-                ),
-                child: Center(
-                  child: Text(
-                    'Start Training',
-                    style: TextStyle(
-                      fontSize: screenWidth * 0.055,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-
-            Container(
-              width: bridgeWidth,
-              height: bridgeHeight,
-              color: buttonColor,
-            ),
-
-            Container(
-              width: componentHeight,
-              height: componentHeight,
-              decoration: const BoxDecoration(
+    return GestureDetector(
+      onTap: onTap,
+      child: Row(
+        children: [
+          Expanded(
+            child: Container(
+              height: buttonHeight,
+              decoration: BoxDecoration(
                 color: buttonColor,
-                shape: BoxShape.circle,
+                borderRadius: BorderRadius.circular(40),
               ),
               child: Center(
-                child: Container(
-                  width: innerCircleSize,
-                  height: innerCircleSize,
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    shape: BoxShape.circle,
-                  ),
-                  child: const Icon(
-                    Icons.play_arrow_rounded,
-                    size: 30,
-                    color: buttonColor,
-                  ),
-                ),
+                child: Text(title, style: AppTextStyles.trainingButton),
               ),
             ),
-          ],
-        ),
+          ),
+
+          Container(
+            width: bridgeWidth,
+            height: bridgeHeight,
+            color: buttonColor,
+          ),
+
+          Container(
+            width: playButtonSize,
+            height: playButtonSize,
+            decoration: const BoxDecoration(
+              color: buttonColor,
+              shape: BoxShape.circle,
+            ),
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: Image.asset(AppIcons.whitePlay, color: Colors.white),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

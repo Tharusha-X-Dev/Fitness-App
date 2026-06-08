@@ -1,9 +1,9 @@
-import 'package:fitness_app/features/splash/presentation/screens/startup_screen.dart';
+import 'package:fitness_app/screens/splash/presentation/screens/startup_screen.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../features/splash/presentation/screens/splash_screen.dart';
-import '../../features/dashboard/screens/dashboard_screen.dart';
-import '../../features/workout/screens/workout_screen.dart';
+import '../../screens/splash/presentation/screens/splash_screen.dart';
+import '../../screens/dashboard/screens/dashboard_screen.dart';
+import '../../screens/workout/screens/workout_screen.dart';
 
 final GoRouter appRouter = GoRouter(
   initialLocation: '/',

@@ -1,3 +1,5 @@
+import 'package:fitness_app/core/theme/app_text_styles.dart';
+import 'package:fitness_app/core/utils/app_strings.dart';
 import 'package:flutter/material.dart';
 
 class ExploreBanner extends StatelessWidget {
@@ -30,16 +32,12 @@ class ExploreBanner extends StatelessWidget {
               Text(
                 title,
                 textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w700,
-                  color: Colors.white,
-                ),
+                style: AppTextStyles.exploreBannerTitle,
               ),
               const SizedBox(height: 10),
-              const Text(
-                'Explore now',
-                style: TextStyle(color: Colors.white, fontSize: 16),
+              Text(
+                AppStrings.exploreBannerSubtitle,
+                style: AppTextStyles.exploreBannerSubtitle,
               ),
             ],
           ),

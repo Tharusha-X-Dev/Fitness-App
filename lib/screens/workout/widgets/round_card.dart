@@ -1,5 +1,5 @@
-import 'package:fitness_app/features/workout/models/exercise_model.dart';
-import 'package:fitness_app/features/workout/widgets/exercise_tile.dart';
+import 'package:fitness_app/screens/workout/models/exercise_model.dart';
+import 'package:fitness_app/screens/workout/widgets/exercise_tile.dart';
 import 'package:flutter/material.dart';
 
 class RoundCard extends StatelessWidget {

@@ -7,5 +7,6 @@ class AppTheme {
     scaffoldBackgroundColor: AppColors.background,
     brightness: Brightness.dark,
     useMaterial3: true,
+    fontFamily: 'Alatsi',
   );
 }

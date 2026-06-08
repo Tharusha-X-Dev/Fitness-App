@@ -1,3 +1,5 @@
+import 'package:fitness_app/core/theme/app_text_styles.dart';
+import 'package:fitness_app/core/utils/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -10,14 +12,14 @@ import '../widgets/workout_card.dart';
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
 
+  static const List<String> recommendedImages = [
+    AppImages.bend,
+    AppImages.run,
+    AppImages.stretch,
+  ];
+
   @override
   Widget build(BuildContext context) {
-    final recommendedImages = [
-      AppImages.bend,
-      AppImages.run,
-      AppImages.stretch,
-    ];
-
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -27,13 +29,9 @@ class DashboardScreen extends StatelessWidget {
             children: [
               const SizedBox(height: 10),
 
-              const Text(
-                'Hello Jenna,\nLet’s start exercising',
-                style: TextStyle(
-                  fontSize: 34,
-                  fontWeight: FontWeight.w700,
-                  color: Colors.white,
-                ),
+              Text(
+                'Hello ${AppStrings.userName},\n${AppStrings.dashboardGreeting}',
+                style: AppTextStyles.dashboardGreeting,
               ),
 
               const SizedBox(height: 30),
@@ -60,11 +58,11 @@ class DashboardScreen extends StatelessWidget {
                 ],
               ),
 
-              const SizedBox(height: 40),
+              const SizedBox(height: 30),
 
-              const Text(
-                'Recommended for you',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+              Text(
+                AppStrings.recommendedTitle,
+                style: AppTextStyles.recommendedTitle,
               ),
 
               const SizedBox(height: 20),
@@ -84,14 +82,14 @@ class DashboardScreen extends StatelessWidget {
 
               ExploreBanner(
                 imagePath: AppImages.meditation,
-                title: 'Find me a personal Trainer',
+                title: AppStrings.trainerTitle,
               ),
 
               const SizedBox(height: 30),
 
               ExploreBanner(
                 imagePath: AppImages.warmUp,
-                title: 'Find me group classes',
+                title: AppStrings.groupTitle,
               ),
 
               const SizedBox(height: 30),

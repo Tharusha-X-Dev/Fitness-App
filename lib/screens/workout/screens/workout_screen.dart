@@ -1,5 +1,6 @@
 import 'package:fitness_app/core/theme/app_colors.dart';
-import 'package:fitness_app/features/workout/data/workout_data.dart';
+import 'package:fitness_app/core/utils/app_strings.dart';
+import 'package:fitness_app/screens/workout/data/workout_data.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/utils/app_images.dart';
@@ -20,7 +21,7 @@ class WorkoutScreen extends StatelessWidget {
           children: [
             const WorkoutHeader(
               image: AppImages.lift,
-              title: 'Full Body Workout',
+              title: AppStrings.workoutHeader,
             ),
 
             Padding(
