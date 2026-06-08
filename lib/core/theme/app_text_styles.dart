@@ -32,7 +32,7 @@ class AppTextStyles {
   );
 
   static const TextStyle workoutTitle = TextStyle(
-    fontSize: 20,
+    fontSize: 30,
     color: Colors.white,
   );
 
@@ -47,12 +47,12 @@ class AppTextStyles {
   );
 
   static const TextStyle exerciseTitle = TextStyle(
-    fontSize: 10,
+    fontSize: 15,
     color: Colors.black,
   );
 
   static const TextStyle exerciseReps = TextStyle(
-    fontSize: 10,
+    fontSize: 13,
     color: Colors.grey,
   );
 

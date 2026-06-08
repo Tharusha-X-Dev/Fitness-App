@@ -1,5 +1,6 @@
 import 'dart:math' as math;
 
+import 'package:fitness_app/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -36,15 +37,8 @@ class WorkoutHeader extends StatelessWidget {
 
           Positioned(
             left: 24,
-            bottom: media.padding.bottom + 24,
-            child: Text(
-              title,
-              style: const TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.w700,
-                color: Colors.white,
-              ),
-            ),
+            bottom: media.padding.bottom,
+            child: Text(title, style: AppTextStyles.workoutTitle),
           ),
         ],
       ),
