@@ -32,7 +32,7 @@ class AppTextStyles {
   );
 
   static const TextStyle workoutTitle = TextStyle(
-    fontSize: 30,
+    fontSize: 20,
     color: Colors.white,
   );
 
