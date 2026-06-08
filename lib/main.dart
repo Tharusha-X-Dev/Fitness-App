@@ -3,18 +3,14 @@ import 'package:provider/provider.dart';
 
 import 'core/router/app_router.dart';
 import 'core/theme/app_theme.dart';
-import 'features/workout/providers/workout_provider.dart';
+import 'screens/workout/providers/workout_provider.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   runApp(
     MultiProvider(
-      providers: [
-        ChangeNotifierProvider(
-          create: (_) => WorkoutProvider(),
-        ),
-      ],
+      providers: [ChangeNotifierProvider(create: (_) => WorkoutProvider())],
       child: const MyApp(),
     ),
   );
