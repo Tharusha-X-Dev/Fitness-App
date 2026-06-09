@@ -36,26 +36,29 @@ class DashboardScreen extends StatelessWidget {
 
               const SizedBox(height: 30),
 
-              Row(
-                children: [
-                  WorkoutCard(
-                    imagePath: AppImages.cycling,
-                    buttonColor: AppColors.primary,
-                    onTap: () {
-                      context.push('/workout');
-                    },
-                  ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    WorkoutCard(
+                      imagePath: AppImages.cycling,
+                      buttonColor: AppColors.primary,
+                      onTap: () {
+                        context.push('/workout');
+                      },
+                    ),
 
-                  const SizedBox(width: 20),
+                    const SizedBox(width: 20),
 
-                  WorkoutCard(
-                    imagePath: AppImages.pushups,
-                    buttonColor: const Color(0xFFF26B6B),
-                    onTap: () {
-                      context.push('/workout');
-                    },
-                  ),
-                ],
+                    WorkoutCard(
+                      imagePath: AppImages.pushups,
+                      buttonColor: const Color(0xFFF26B6B),
+                      onTap: () {
+                        context.push('/workout');
+                      },
+                    ),
+                  ],
+                ),
               ),
 
               const SizedBox(height: 30),
